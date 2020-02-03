@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="edit_my_profile">Edit my profile</string>
+    <string name="bio">Bio</string>
+    <string name="username">Username</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+</resources>

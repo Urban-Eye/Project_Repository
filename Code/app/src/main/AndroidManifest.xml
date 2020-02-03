@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.myapplication">
+
+    <!-- A declaration of the ACCESS_FINE_LOCATION permission. This is required to access the user’s precise location. -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Urban Eye"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!-- API Maps-->
+        <uses-library android:name="org.apache.http.legacy" android:required="false"/>
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <!-- Relie le bouton fleche retour de la page Favorite à la page principale -->
+        <activity android:name=".Activity_Favorite"
+            android:parentActivityName=".MainActivity"></activity>
+
+
+        <!-- Relie le bouton fleche retour de la page Explore à la page principale -->
+        <activity
+            android:name=".Activity_Explore"
+            android:parentActivityName=".MainActivity" />
+
+        <!-- Relie le bouton fleche retour de la page Profile à la page principale -->
+        <activity
+            android:name=".Activity_Profile"
+            android:parentActivityName=".MainActivity" />
+
+        <activity
+            android:name=".Activity_Profile_Edit"
+            android:parentActivityName=".Activity_Profile"/>
+
+        <activity
+            android:name=".Activity_Maps"
+            android:parentActivityName=".MainActivity"/>
+
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

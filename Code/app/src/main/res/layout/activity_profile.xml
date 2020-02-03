@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activity_Profile">
+
+    <RelativeLayout
+        android:id="@+id/profile_picture"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <!-- Profile picture START -->
+        <ImageView
+            android:id="@+id/polaroid"
+            android:layout_width="220dp"
+            android:layout_height="225dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="133dp"
+            android:layout_marginTop="140dp"
+            android:src="@drawable/polaroid"></ImageView>
+
+        <ImageView
+            android:id="@+id/my_picture"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="133dp"
+            android:layout_marginTop="170dp"
+            android:src="@drawable/my_picture"></ImageView>
+        <!-- Profile picture END -->
+
+        <!-- Username -->
+        <TextView
+            android:id="@+id/username_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="164dp"
+            android:layout_marginBottom="217dp"
+            android:text="Username"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <!-- Profile Floating Menu START -->
+        <com.getbase.floatingactionbutton.FloatingActionsMenu
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="-2dp"
+            android:layout_marginBottom="54dp"
+            app:fab_addButtonColorNormal="@color/Search"
+            app:fab_addButtonColorPressed="@color/Food"
+            app:fab_addButtonPlusIconColor="@color/colorWhite"
+            app:fab_labelStyle="@style/custom_fab">
+
+            <!-- Edit profile button -->
+            <com.getbase.floatingactionbutton.FloatingActionButton
+                android:id="@+id/edit_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:fab_colorNormal="@color/colorWhite"
+                app:fab_colorPressed="@color/white_pressed"
+                app:fab_icon="@drawable/ic_edit_black_24dp"
+                app:fab_size="mini"
+                app:fab_title="Edit profile">
+
+            </com.getbase.floatingactionbutton.FloatingActionButton>
+
+            <!-- Settings button -->
+            <com.getbase.floatingactionbutton.FloatingActionButton
+                android:id="@+id/settings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:fab_colorNormal="@color/colorWhite"
+                app:fab_colorPressed="@color/white_pressed"
+                app:fab_icon="@drawable/ic_settings_black_24dp"
+                app:fab_size="mini"
+                app:fab_title="Settings">
+
+            </com.getbase.floatingactionbutton.FloatingActionButton>
+
+            <!-- Log off button -->
+            <com.getbase.floatingactionbutton.FloatingActionButton
+                android:id="@+id/logoff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:fab_colorNormal="@color/colorWhite"
+                app:fab_colorPressed="@color/white_pressed"
+                app:fab_icon="@drawable/ic_power_settings_new_black_24dp"
+                app:fab_size="mini"
+                app:fab_title="Log off">
+
+            </com.getbase.floatingactionbutton.FloatingActionButton>
+
+        </com.getbase.floatingactionbutton.FloatingActionsMenu>
+        <!-- Profile Floating Menu END -->
+
+    </RelativeLayout>
+
+    <!-- Bottom menu START -->
+    <com.ismaeldivita.chipnavigation.ChipNavigationBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:elevation="16dp"
+        android:gravity="center"
+        app:cnb_menuResource="@menu/bottom_menu"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+    </com.ismaeldivita.chipnavigation.ChipNavigationBar>
+    <!-- Bottom menu END -->
+
+</androidx.constraintlayout.widget.ConstraintLayout>
